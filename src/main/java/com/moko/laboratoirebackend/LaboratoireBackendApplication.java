@@ -1,9 +1,12 @@
 package com.moko.laboratoirebackend;
 
+import com.moko.laboratoirebackend.User.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @SpringBootApplication
 @RestController
@@ -14,7 +17,13 @@ public class LaboratoireBackendApplication {
 	}
 
 	@GetMapping("/")
-	public String hello() {
-		return "Hello world!!!";
+	public List<User> hello() {
+		return List.of(
+				new User(
+						1L,
+						"Federico",
+						"Pa$$w0rd"
+				)
+		);
 	}
 }
