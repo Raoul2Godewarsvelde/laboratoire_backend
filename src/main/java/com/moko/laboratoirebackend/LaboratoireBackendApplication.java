@@ -15,15 +15,4 @@ public class LaboratoireBackendApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LaboratoireBackendApplication.class, args);
 	}
-
-	@GetMapping("/")
-	public List<User> hello() {
-		return List.of(
-				new User(
-						1L,
-						"Federico",
-						"Pa$$w0rd"
-				)
-		);
-	}
 }
